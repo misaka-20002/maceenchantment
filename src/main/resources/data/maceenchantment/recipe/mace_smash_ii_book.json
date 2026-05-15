@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:book",
+    "C": "minecraft:heavy_core",
+    "R": "minecraft:breeze_rod"
+  },
+  "pattern": [
+    " C ",
+    "RBR",
+    " C "
+  ],
+  "result": {
+    "components": {
+      "minecraft:stored_enchantments": {
+        "maceenchantment:mace_smash": 2
+      }
+    },
+    "count": 1,
+    "id": "minecraft:enchanted_book"
+  }
+}

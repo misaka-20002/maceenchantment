@@ -1,0 +1,21 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "enchantment.maceenchantment.mace_smash"
+  },
+  "effects": {},
+  "supported_items": "#maceenchantment:enchantable/mace_smash",
+  "slots": [
+    "mainhand"
+  ],
+  "weight": 10,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 8
+  },
+  "max_cost": {
+    "base": 25,
+    "per_level_above_first": 8
+  },
+  "max_level": 4
+}

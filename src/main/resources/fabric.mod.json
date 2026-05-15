@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "maceenchantment",
+	"version": "${version}",
+	"name": "MaceEnchantment",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/maceenchantment/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.misaka20002.maceenchant.MaceEnchantment"
+		],
+		"client": [
+			"com.misaka20002.maceenchant.client.MaceEnchantmentClient"
+		],
+		"fabric-datagen": [
+			"com.misaka20002.maceenchant.client.MaceEnchantmentDataGenerator"
+		]
+	},
+	"mixins": [
+		"maceenchantment.mixins.json",
+		{
+			"config": "maceenchantment.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
