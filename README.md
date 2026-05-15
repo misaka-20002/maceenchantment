@@ -11,6 +11,7 @@ The damage curve has two types: one is minecraft original mace&density damage cu
 
 So you wont get soooooo low damage while other mods give you powerful weapons :)
 
+btw Mace Smash I book has same dropping as HeavyCore and Mace Smash II can be crafted with 2 heavy cores and 2 breeze rods and a book
 
 ## License
 
