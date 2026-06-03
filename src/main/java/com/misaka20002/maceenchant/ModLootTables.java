@@ -34,17 +34,25 @@ public final class ModLootTables {
                                 .setWeight(1)
                                 .apply(SetComponentsFunction.setComponent(
                                         DataComponents.STORED_ENCHANTMENTS,
-                                        createMaceSmashBookEnchantments(registries, 1)))));
+                                        createBookEnchantments(registries, ModEnchantments.MACE_SMASH, 1))))
+                        .add(LootItem.lootTableItem(Items.ENCHANTED_BOOK)
+                                .setWeight(1)
+                                .apply(SetComponentsFunction.setComponent(
+                                        DataComponents.STORED_ENCHANTMENTS,
+                                        createBookEnchantments(registries, ModEnchantments.SPEAR_THRUST, 1)))));
             }
         });
     }
 
-    private static ItemEnchantments createMaceSmashBookEnchantments(HolderLookup.Provider registries, int level) {
-        Holder<Enchantment> maceSmash = registries.lookupOrThrow(Registries.ENCHANTMENT)
-                .get(ModEnchantments.MACE_SMASH)
+    private static ItemEnchantments createBookEnchantments(
+            HolderLookup.Provider registries,
+            ResourceKey<Enchantment> enchantmentKey,
+            int level) {
+        Holder<Enchantment> enchantment = registries.lookupOrThrow(Registries.ENCHANTMENT)
+                .get(enchantmentKey)
                 .orElseThrow();
         ItemEnchantments.Mutable enchantments = new ItemEnchantments.Mutable(ItemEnchantments.EMPTY);
-        enchantments.set(maceSmash, level);
+        enchantments.set(enchantment, level);
         return enchantments.toImmutable();
     }
 }

@@ -108,7 +108,7 @@ public class MaceSmashHandler {
         ItemStack weapon = attacker.getMainHandItem();
         double fallDistance = smashAttack.distance();
         double baseSmashDamage = calculateSmashDamage(fallDistance);
-        double attackDamage = Math.max(0.0, attacker.getAttributeValue(Attributes.ATTACK_DAMAGE));
+        double attackDamage = Math.max(0.0, ModDamageHelper.getWeaponAttackDamageWithSharpness(weapon));
         double damage = Math.max(baseSmashDamage, baseSmashDamage * attackDamage * 0.1);
         int densityLevel = getDensityLevel(level, weapon);
         double baseDensityBonus = densityLevel * 0.5 * fallDistance;
@@ -142,8 +142,7 @@ public class MaceSmashHandler {
             if (smashAttack.elytra()) {
                 triggerElytraWindBurst(level, attacker, attacker.getMainHandItem());
             }
-            player.currentImpulseImpactPos = calculateImpactPosition(player);
-            player.setIgnoreFallDamageFromCurrentImpulse(true);
+            player.setIgnoreFallDamageFromCurrentImpulse(true, calculateImpactPosition(player));
             player.connection.send(new ClientboundSetEntityMotionPacket(player));
         }
 

@@ -1,0 +1,19 @@
+{
+  "values": [
+    "#minecraft:enchantable/weapon",
+    "#minecraft:enchantable/sharp_weapon",
+    "#minecraft:enchantable/mining",
+    {
+      "id": "#c:tools",
+      "required": false
+    },
+    {
+      "id": "#c:weapons",
+      "required": false
+    },
+    {
+      "id": "#c:melee_weapons",
+      "required": false
+    }
+  ]
+}

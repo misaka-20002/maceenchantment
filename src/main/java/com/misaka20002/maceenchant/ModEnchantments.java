@@ -9,6 +9,9 @@ public final class ModEnchantments {
     public static final ResourceKey<Enchantment> MACE_SMASH = ResourceKey.create(
             Registries.ENCHANTMENT,
             Identifier.fromNamespaceAndPath(MaceEnchantment.MODID, "mace_smash"));
+    public static final ResourceKey<Enchantment> SPEAR_THRUST = ResourceKey.create(
+            Registries.ENCHANTMENT,
+            Identifier.fromNamespaceAndPath(MaceEnchantment.MODID, "spear_thrust"));
 
     private ModEnchantments() {
     }
